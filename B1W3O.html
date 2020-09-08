@@ -3,29 +3,34 @@
 		<script>
 			// Robin Kuiphof
 			// Pizza calculator	
-			var name = prompt("Wat is uw voornaam")				// naam
-			var secondName = prompt("Wat is uw achternaam")		// achternaam
-			var adres = prompt("Wat is uw adres")				// adres
-			var fullName = (name + "_" + secondName)			// volledige naam
-			document.write(fullName + "<br>" + adres)			// volledige naam + adres write
+			var name = prompt("Wat is uw voornaam");			// naam
+			var secondName = prompt("Wat is uw achternaam");	// achternaam
+			var adres = prompt("Wat is uw adres");				// adres
+			var fullName = (name + "_" + secondName);			// volledige naam
+			document.write(fullName + "<br>" + adres);			// volledige naam + adres write
 
-			const small = (7.80)   	// kleine Pizza prijs
-			const medium = (10.20) 	// medium pizza prijs
-			const large = (12.10)		// grote pizza prijs
+			const SMALL = (7.80);   	// kleine Pizza prijs
+			const MEDIUM = (10.20); 	// medium pizza prijs
+			const LARGE = (12.10);		// grote pizza prijs
 
-			const smallAmount = prompt("Hoeveel Kleine Pizza's")  // hoeveelheid kleine pizza's
-			const mediumAmount = prompt("Hoeveel medium Pizza")	// hoeveelheid medium pizza's
-			const largeAmount = prompt("Hoeveel large Pizza")	// hoeveelheid grote pizza's
+			var smallAmount = prompt("Hoeveel Kleine Pizza's");  // hoeveelheid kleine pizza's
+			var mediumAmount = prompt("Hoeveel medium Pizza");	// hoeveelheid medium pizza's
+			var largeAmount = prompt("Hoeveel large Pizza");	// hoeveelheid grote pizza's
 
-			var priceSmallPizza = (small * smallAmount)																// totaal bedrag kleine pizza's
-			document.write("<br>" + "<br>" + "Kleine pizza's: "+ smallAmount + " = " + priceSmallPizza + " €")		// display hoeveelheid + en prijs
-			var priceMediumPizza = (medium * mediumAmount)															// totaal bedrag medium  pizza's
-			document.write("<br>" + "Medium pizza's: "+ mediumAmount + " = " + priceMediumPizza + " €")				// display hoeveelheid + en prijs 
-			var priceLargePizza = (large * largeAmount)																// totaal bedrag large pizza's
-			document.write("<br>" + "large pizza's: "+ largeAmount + " = " + priceLargePizza + " €")				// display hoeveelheid + en prijs
 
-			var totalPrice = (priceLargePizza + priceMediumPizza + priceSmallPizza)
-			document.write("<br>" + "totaal prijs: " + totalPrice + " €")
+			var priceSmallPizzaCalculate = (SMALL * smallAmount);													// totaal bedrag kleine pizza's
+			var priceSmallPizza = priceSmallPizzaCalculate.toFixed(2);												// 2 nummers afronden 
+			document.write("<br>" + "<br>" + "Kleine pizza's: hoeveelheid"+ smallAmount + " = " + priceSmallPizza + " €");		// display hoeveelheid + en prijs
+			var priceMediumPizzaCalculate = (MEDIUM * mediumAmount);												// totaal bedrag medium  pizza's
+			var priceMediumPizza = priceMediumPizzaCalculate.toFixed(2);											// 2 nummers afronden 
+			document.write("<br>" + "Medium pizza's: hoeveelheid"+ mediumAmount + " = " + priceMediumPizza + " €");			// display hoeveelheid + en prijs 
+			var priceLargePizzaCalculate = (LARGE * largeAmount);													// totaal bedrag large pizza's
+			var priceLargePizza = priceLargePizzaCalculate.toFixed(2);												// 2 nummers afronden 
+			document.write("<br>" + "Large pizza's: hoeveelheid"+ largeAmount + " = " + priceLargePizza + " €");				// display hoeveelheid + en prijs
+	
+			var totalPriceCalculate = (priceLargePizzaCalculate + priceMediumPizzaCalculate + priceSmallPizzaCalculate);								// berekening totaal prijs 
+			var totalPrice = totalPriceCalculate.toFixed(2);	
+			document.write("<br>" + "<br>" + "totaal prijs = " + totalPrice + " €");								// display totaal prijs
 		</script>
 	</body>
 <html>		
